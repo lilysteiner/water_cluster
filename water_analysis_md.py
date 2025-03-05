@@ -37,7 +37,7 @@ def normalize_probe_occupancy_grid(grid):
 
 def water_analysis(jobname,cms_fname):
     grid_spacing =0.5
-    align_asl = '(protein and atom.ptype CA)'
+    align_asl = '(protein and (backbone or sidechain))'
     #read in cms file 
     msys_model, cms_model, tr = traj_util.read_cms_and_traj(cms_fname)
     #get cosolvent structure 
